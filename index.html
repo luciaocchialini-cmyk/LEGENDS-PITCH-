@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEGENDS PITCH</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #07140d;
+  color: white;
+  text-align: center;
+}
+
+.game {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background:
+    radial-gradient(circle at center, #176c38 0%, #092516 55%, #040b07 100%);
+}
+
+.logo {
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-top: 50px;
+}
+
+.logo span {
+  color: #ffd700;
+}
+
+.subtitle {
+  color: #d4d4d4;
+  margin: 10px 0 50px;
+  font-size: 20px;
+}
+
+.menu {
+  max-width: 430px;
+  margin: auto;
+}
+
+button {
+  width: 100%;
+  padding: 18px;
+  margin: 9px 0;
+  border: 0;
+  border-radius: 14px;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.play {
+  background: #25d366;
+  color: #041b0c;
+}
+
+.secondary {
+  background: #18271f;
+  color: white;
+  border: 2px solid #395647;
+}
+
+.coins {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  background: #121d16;
+  padding: 12px 18px;
+  border-radius: 20px;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+#message {
+  margin-top: 25px;
+  color: #ffd700;
+  font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="game">
+
+<div class="coins">🪙 1.000</div>
+
+<div class="logo">
+LEGENDS <span>PITCH</span>
+</div>
+
+<div class="subtitle">
+Construa seu time. Crie sua lenda.
+</div>
+
+<div class="menu">
+
+<button class="play" onclick="startGame()">
+⚽ JOGAR
+</button>
+
+<button class="secondary" onclick="showMessage('Elenco em construção!')">
+👥 MEU TIME
+</button>
+
+<button class="secondary" onclick="showMessage('Cartas em construção!')">
+⭐ JOGADORES
+</button>
+
+<button class="secondary" onclick="showMessage('Loja em construção!')">
+🛒 LOJA
+</button>
+
+<button class="secondary" onclick="showMessage('Campeonatos em construção!')">
+🏆 CAMPEONATOS
+</button>
+
+<div id="message"></div>
+
+</div>
+</div>
+
+<script>
+function startGame() {
+  document.getElementById("message").innerHTML =
+  "⚽ LEGENDS PITCH FUNCIONANDO!";
+}
+
+function showMessage(text) {
+  document.getElementById("message").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
